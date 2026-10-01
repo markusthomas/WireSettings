@@ -1,0 +1,30 @@
+/**
+ * WireSettings Stylesheet
+ *
+ * Backend UIkit adjustments and polish for WireSettings.
+ *
+ * @author Markus Thomas
+ * @license MIT
+ */
+
+#wire_settings_template_shortcut .uk-alert {
+    border-left: 4px solid #1e87f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+#wire_settings_template_shortcut .uk-button {
+    font-weight: 500;
+}
+
+/* Ensure system tabs are visually hidden on settings page */
+.wire-settings-page #ProcessPageEditSettings,
+.wire-settings-page #ProcessPageEditDelete,
+.wire-settings-page #ProcessPageEditChildren,
+.wire-settings-page #_ProcessPageEditSettings,
+.wire-settings-page li:has(> a[href*="ProcessPageEditSettings"]),
+.wire-settings-page li:has(> a[href*="ProcessPageEditDelete"]),
+.wire-settings-page li:has(> a[href*="ProcessPageEditChildren"]),
+.wire-settings-page li:has(> a[href*="_ProcessPageEditSettings"]) {
+    display: none !important;
+}
